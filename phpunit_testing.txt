@@ -1,0 +1,428 @@
+-->For updating chrome
+
+\\pcs54\Download\Browser\Chrome\63 ChromeStandaloneSetup64.exe
+
+============================================================
+
+Project: test_30th(laravel version 5.5)
+
+===================================
+for share folder \\192.168.10.9
+
+User: team5
+Password: M+R8l125
+
+
+
+project url: http://192.168.10.9/team5/test_30th/public/
+===================================
+
+
+
+->cd Projects/xampp/htdocs/test_30th
+
+	->phpstorm
+	
+	->on which port chrome runs
+	
+	->laravel dusk operation timed out after 30000 milliseconds with 0 bytes received
+	
+	->facebook\webdriver\exception\webdrivercurlexception: curl error thrown for http post to /session
+
+
+	
+	->Cygwin issue when trying to run phpunit within Yii2 (Windows) #2365
+
+	->See if we are running in Cygwin by checking for cygpath program error in php dusk
+	
+	->Curl error thrown for http POST to /session with params while running dusk on laravel windows
+	
+	->unknown error: cannot find Chrome binary Using laravel Dusk and Valet
+
+	->laravel dusk operation timed out after 30001 milliseconds with 0 bytes received
+
+         ->dusk failed to connect to localhost port 9515: connection refused
+
+		->automated browser testing laravel
+
+
+
+	->In Process.php line 1032: TTY mode is not supported on Windows platform laravel dusk
+
+-->In laravel .env config are checked for db not config/database.php
+
+-->check phpunit version by following command
+
+	phpunit --version
+
+->https://www.startutorial.com/articles/view/phpunit-beginner-part-1-get-started
+
+->https://laravel.com/docs/5.1/testing#phpunit-assertions
+
+->https://laravel.com/docs/5.5/testing
+
+->https://laraveltips.wordpress.com/category/phpunit-testing-in-laravel-5-1/
+
+->https://appdividend.com/2017/09/11/laravel-5-5-testing-example/
+
+->https://laravel.io/forum/07-29-2014-unit-testing-phpunit-command-doesnt-exists
+
+=====================================================What is assertion in phpunit
+
+->https://jtreminio.com/2013/03/unit-testing-tutorial-part-2-assertions-writing-a-useful-test-and-dataprovider/
+
+
+===================================================Assertion list
+
+->https://gist.github.com/briankip/35e3506be8b1ecbcf3bb
+
+===================================================Assertion description
+
+->https://phpunit.de/manual/current/en/appendixes.assertions.html
+
+---->First install laravel project (version 5.5) and phpunit is already integrated in version 5.5 so no need to download it separately.
+
+	--->After making project type command
+ 			vendor\bin\phpunit --version to confirm installation of phpunit.
+
+	--->php artisan make:test UserTest command make UserTest file in Feature folder
+
+	--->php artisan make:test UserTest --unit command make UserTest file in Unit folder
+
+--->Before running test clear config cache bhy following command.
+	
+	php artisan config:clear
+
+--->For running phpunit type following command from project root directory(For laravel 5.1)
+	
+	vendor\bin\phpunit
+
+--->If two assertions are checked in one function then counted as two instead of one because two conditions are checked.For example
+
+	$this->assertGreaterThanOrEqual(3, $a);
+
+	--->Here greater then and equal to both con are checked taht's y counted as two though fun is 1.
+
+
+--->Assertions which are not defined
+	
+	(1)assertType
+	(2)assertNotType
+	(3)assertSelectCount
+	(4)isTrue
+	(4)isNull
+
+
+
+
+
+======================================================testing automatically by openning browser
+->https://stackoverflow.com/questions/41562229/how-to-create-automated-test-case-in-laravel
+
+->https://laravel.com/docs/5.1/testing#interacting-with-your-application
+
+->https://laracasts.com/discuss/channels/testing/visit-and-see-and-all-that-not-working
+
+->https://stackoverflow.com/questions/42645066/acceptance-test-method-visit-undefined
+
+->https://laravel.com/docs/5.5/dusk
+
+->https://scotch.io/tutorials/introduction-to-laravel-dusk
+
+->https://blog.codeship.com/laravel-and-dusk-on-codeship/
+
+->https://christoph-rumpel.com/2017/01/Browser-Tests-with-Laravel-Dusk
+
+->https://www.sitepoint.com/laravel-dusk-intuitive-and-easy-browser-testing-for-all/
+
+->https://github.com/laravel/dusk/issues/276
+
+->https://stackoverflow.com/questions/46416870/errors-running-laravel-dusk
+
+->https://github.com/laravel/dusk/issues/182
+
+->https://github.com/laravel/dusk/issues/297
+
+-> TTY mode is not supported on Windows platform.
+
+
+=============================browser kit testing
+
+->https://github.com/laravel/browser-kit-testing#laravel-browserkit-testing
+
+
+===============================For dusk installation(browser automated testing)
+->https://laravel.com/docs/5.4/dusk
+->     composer require --dev laravel/dusk
+
+	php artisan dusk:install
+
+===========================================================================
+
+
+
+
+->services are app/providers/Appserviceprovider
+
+->process.php is in vendor/symfony/process/process.php
+
+
+
+
+========================For creating user in db==============
+
+->click on db and then user accounts n then check all privileges.
+
+u:monali
+p:monali
+
+
+
+
+============================issues on 192.168.10.9
+
+->https://laracasts.com/discuss/channels/testing/unknown-error-cannot-find-chrome-binary-using-laravel-dusk-and-valet?page=0
+
+->https://github.com/laravel/dusk/issues/44
+
+===================================laravel 5.1
+
+->composer create-project --prefer-dist laravel/laravel projectname
+
+==================================Project:test_30th_old============================laravel 5.4=================
+
+https://laravel.com/docs/5.4/installation
+composer create-project --prefer-dist laravel/laravel blog "5.4.*"
+
+====================command for dusk==
+
+->vendor\laravel\dusk\bin\chromedriver-win	
+
+
+================================useful for laravel when u run project without php artisan serve
+
+-> do not use <a href="/about-us">abc</a> but use like given way
+
+                <a href="{{ URL::to('about-us') }}">abc</a>
+
+
+================================issues n soln=====
+
+------->Cygwin issue
+	
+	https://github.com/laravel/dusk/issues/50
+
+------->Curl error
+
+	https://github.com/laravel/dusk/issues/10
+
+
+
+-------------------->10.9(test_30th_old)
+
+========================on live
+
+--->while running php artisan dusk
+	
+	dir=$(d=${0%[/\\]*}; cd "$d" > /dev/null; cd "../phpunit/phpunit" && pwd)
+
+# See if we are running in Cygwin by checking for cygpath program
+if command -v 'cygpath' >/dev/null 2>&1; then
+        # Cygwin paths start with /cygdrive/ which will break windows PHP,
+        # so we need to translate the dir path to windows format. However
+        # we could be using cygwin PHP which does not require this, so we
+        # test if the path to PHP starts with /cygdrive/ rather than /usr/bin
+        if [[ $(which php) == /cygdrive/* ]]; then
+                dir=$(cygpath -m "$dir");
+        fi
+fi
+
+dir=$(echo $dir | sed 's/ /\ /g')
+"${dir}/phpunit" "$@"
+
+
+
+--->while installing dusk
+
+	php v error
+
+==============================on local
+
+--->In Process.php line 1032:
+
+  TTY mode is not supported on Windows platform.
+
+
+
+
+--------------------------------------->10.9(test_30th)
+
+=====================================on live
+
+--->while running php artisan dusk
+
+PHPUnit 6.5.5 by Sebastian Bergmann and contributors.
+
+E                                                                   1 / 1 (100%)
+
+Time: 352 ms, Memory: 10.00MB
+
+There was 1 error:
+
+1) Tests\Browser\ExampleTest::testBasicExample
+Facebook\WebDriver\Exception\UnknownServerException: unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.33.506092 (733a02544d189eeb751fe0d7ddca79a0ee28cce4),platform=Linux 4.4.0-112-generic x86_64)
+
+/var/www/team5/test_30th/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/var/www/team5/test_30th/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:320
+/var/www/team5/test_30th/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:126
+/var/www/team5/test_30th/tests/DuskTestCase.php:39
+/var/www/team5/test_30th/vendor/laravel/dusk/src/Concerns/ProvidesBrowser.php:185
+/var/www/team5/test_30th/vendor/laravel/framework/src/Illuminate/Support/helpers.php:765
+/var/www/team5/test_30th/vendor/laravel/dusk/src/Concerns/ProvidesBrowser.php:186
+/var/www/team5/test_30th/vendor/laravel/dusk/src/Concerns/ProvidesBrowser.php:92
+/var/www/team5/test_30th/vendor/laravel/dusk/src/Concerns/ProvidesBrowser.php:64
+/var/www/team5/test_30th/tests/Browser/ExampleTest.php:21
+
+ERRORS!
+Tests: 1, Assertions: 0, Errors: 1.
+
+
+--->while installing dusk
+
+ Problem 1
+    - symfony/css-selector v4.0.4 requires php ^7.1.3 -> your PHP version (7.0.22) does not satisfy that requirement.
+    - symfony/css-selector v4.0.4 requires php ^7.1.3 -> your PHP version (7.0.22) does not satisfy that requirement.
+    - symfony/css-selector v4.0.4 requires php ^7.1.3 -> your PHP version (7.0.22) does not satisfy that requirement.
+    - Installation request for symfony/css-selector (locked at v4.0.4) -> satisfiable by symfony/css-selector[v4.0.4].
+
+
+============================on local
+
+--->Warning: TTY mode is not supported on Windows platform.
+PHPUnit 6.5.5 by Sebastian Bergmann and contributors.
+
+E                                                                   1 / 1 (100%)
+
+Time: 2.53 minutes, Memory: 10.00MB
+
+There was 1 error:
+
+1) Tests\Browser\ExampleTest::testBasicExample
+Facebook\WebDriver\Exception\WebDriverCurlException: Curl error thrown for http POST to /session with params: {"desiredCapabilities":{"browserName":"chrome","platform":"ANY","chromeOptions":{"binary":"","args":["--disable-gpu","--headless"]}}}
+
+Operation timed out after 30000 milliseconds with 0 bytes received
+
+D:\Projects\xampp\htdocs\test_30th\vendor\facebook\webdriver\lib\Remote\HttpCommandExecutor.php:286
+D:\Projects\xampp\htdocs\test_30th\vendor\facebook\webdriver\lib\Remote\RemoteWebDriver.php:126
+D:\Projects\xampp\htdocs\test_30th\tests\DuskTestCase.php:39
+D:\Projects\xampp\htdocs\test_30th\vendor\laravel\dusk\src\Concerns\ProvidesBrowser.php:185
+D:\Projects\xampp\htdocs\test_30th\vendor\laravel\framework\src\Illuminate\Support\helpers.php:765
+D:\Projects\xampp\htdocs\test_30th\vendor\laravel\dusk\src\Concerns\ProvidesBrowser.php:186
+D:\Projects\xampp\htdocs\test_30th\vendor\laravel\dusk\src\Concerns\ProvidesBrowser.php:92
+D:\Projects\xampp\htdocs\test_30th\vendor\laravel\dusk\src\Concerns\ProvidesBrowser.php:64
+D:\Projects\xampp\htdocs\test_30th\tests\Browser\ExampleTest.php:21
+
+ERRORS!
+Tests: 1, Assertions: 0, Errors: 1.
+
+
+
+
+
+==================================================soln terms(5/2/2018)================================================
+
+->https://github.com/laravel/dusk/issues/399
+
+	30000 timeout means you don't have Chrome Driver running or Chrome Driver cannot run Google Chrome. It has nothing to do with connectivity.
+
+-------->local(test_30th)
+	
+	--->Also updated chrome version 58 to 62
+
+	--->Also changed port no in dusktestcase.php
+
+	--->Also made new project after updating chrome.
+
+	---->while running php artisan dusk chromedriver.exe is running in task manager but when curl error is displayed chromedriver.exe stops running.
+
+
+	(1) Curl error thrown for http POST to /session with params while running php artisan dusk on windows + laravel 5.5
+
+	->  have downloaded chromedriver from https://sites.google.com/a/chromium.org/chromedriver/ and starts it manually from console. Then command php artisan dusk works. But it opens webbrowser :)
+	
+		(doesn't work)
+
+	(2) Operation timed out after 30000 milliseconds with 0 bytes received while running php artisan dusk laravel on windows
+
+	-> dwd chrome manually
+
+	(3) laravel dusk not working
+
+	-> protected function driver() {
+		$chromeOptions = new ChromeOptions();
+		$chromeOptions->addArguments(['no-sandbox']);
+		$capabilities = DesiredCapabilities::chrome();
+		$capabilities->setCapability(ChromeOptions::CAPABILITY, $chromeOptions);
+		
+		return RemoteWebDriver::create(
+			'http://localhost:9515',
+			$capabilities, 150000, 150000
+		);
+	}
+
+	-> $options = (new ChromeOptions)->addArguments([
+            '--disable-gpu',
+            '--headless',
+            '--no-sandbox'
+        ]);
+	
+	->add DuskServiceProvider in config/app.php
+
+	(4) facebook\webdriver\exception\webdrivercurlexception: curl error thrown for http post to /session
+
+	-> dwd chrome manually
+
+	(5) laravel dusk timeout
+
+	-> protected function driver()
+    {
+        $options = (new ChromeOptions)->addArguments([
+            '--disable-gpu',
+            '--headless'
+        ]);
+
+        return RemoteWebDriver::create(
+            'http://localhost:9515', DesiredCapabilities::chrome()->setCapability(
+                ChromeOptions::CAPABILITY, $options
+            ),60*1000, 60*1000
+        );
+    }
+
+	(6) curl error thrown for http post to session with params
+
+	->
+
+	(7) laravel dusk headless
+
+	-> protected function driver()
+    {
+        $capabilities  = DesiredCapabilities::chrome();
+        $chromeOptions = (new ChromeOptions)->addArguments(['headless', 'disable-gpu']);
+        $capabilities->setCapability(ChromeOptions::CAPABILITY, $chromeOptions);
+
+        return RemoteWebDriver::create('http://localhost:9515', $capabilities);
+    }
+
+	(8) laravel dusk operation timed out after 30000 milliseconds with 0 bytes received
+
+	->
+	
+	(9) facebook webdriver exception webdrivercurlexception curl error
+
+	->
+
+	(10) laravel dusk tty mode is not supported on windows platform
+
+	->
+

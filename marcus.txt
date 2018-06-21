@@ -1,0 +1,169 @@
+3 hrs for marcus n remaining in bench
+
+->limit in sql;
+
+https://developer.wordpress.org/reference/functions/get_posts/
+
+->live 
+
+url:marcusspring2018.webcamp.dk
+
+	->cpanel
+
+		Domain: marcusspring2018.webcamp.dk/cpanel
+		Ip: 83.142.229.104
+		HasCgi: y
+		UserName: marcusspring2018
+		PassWord: back4Mice
+		
+	->wp-admin 
+		u: admin
+		p: admin123
+->local
+
+	url:localhost/marcus
+
+	->wp-admin 
+		u: admin
+		p: admin123
+
+--->Hi Mehul,(14-03-2018)
+
+I have received more feedback on the website from the designer of the template. 
+The header is the right size and place but it has to be only a picture and not a slider. 
+Also it should be possible for this header picture to be different on every category subpage. 
+And where can I edit those headers for the subpages? I can't seem to find it.
+
+And one last thing - the category tags that appear after the slideshow on the front page should also be displayed on every subpage so that 
+the user can shift between categories without having to go back to the front page.
+
+Thank you! I am looking forward to finishing this task, you have been great at helping with our deadline.
+
+--->Hey again Mehul (14-03-2018)
+Looks great, that is exactly what we wanted. We will begin uploading the correct pictures. 
+There is only one thing missing - a header image. Can you implement a header image for every of the category pages - the same size as the slideshow on the front page.
+
+
+-->https://code.tutsplus.com/tutorials/taxonomy-archives-list-posts-by-post-type--cms-20340
+
+	-->6.the first loop
+
+	--->4.obj 
+
+-->For copying the file
+
+D:\Projects\wamp\www\marcus\wp-content\themes\marcus\page-template
+
+to
+
+D:\Projects\wamp\www\marcus\wp-content\themes\marcus\
+
+-->For opening admin panel
+
+http://localhost/marcus/wp-admin
+
+-->Garments are defined in garments section.
+
+-->For adding new custom field
+
+	custom_fields->garment_fields->edit->add new field
+
+
+--->designer html is in html/index
+
+-->
+
+ <li ><span class="tab-link" data-filter=".<?php echo $cat->slug; ?>"><?php echo $cat->name; ?></span></li>
+
+ <li ><span class="tab-link" data-filter=".<?php echo $cat->slug; ?>"><a href="<?php echo site_url();?>/garment-category/<?php echo $cat->name; ?>"><?php echo $cat->name; ?></a></span></li>
+
+
+->css
+
+.tabs li span a {color: #191919;}
+.tabs li span a:hover {color: #fff;}
+
+--->header img comes from header-image.php
+
+--->Text above image comes from site-branding.php
+
+--->Home page settings are in admin panel->settings->reading
+
+--->banner_images in wp_postmeta table.
+
+--->home_subtitle n home_description are in wp_postmeta table.
+
+--->is_front, column_type  in wp_postmeta table.
+
+--->post_type in wp_post table.
+
+--->garment_category in wp_term_taxonomy.
+
+--->garmet_in_dollar in wp_postmeta
+
+--->garmet_in_cent in wp_postmeta
+
+--->show_price_tag_as_overlay in wp_postmeta
+
+--->overlay_text in wp_postmeta
+
+--->overlay_position_left in wp_postmeta
+
+--->overlay_position_top in wp_postmeta
+
+--->merge_price_for_two_product in wp_postmeta
+
+--->select_merge_product_from_same_category in wp_postmeta
+
+--->merge_product_price in wp_postmeta
+
+--->blue_overlay_text in wp_postmeta
+
+--->blue_overlay_top in wp_postmeta
+
+
+--->get_field is used for wp_postmeta table.
+
+--->get_terms is used for wp_terms.
+
+--->get_sub_field(slider_image) is in admin-panel->custom fields->banner_slider->slider_image
+
+--->For getting taxonomy value
+https://wordpress.stackexchange.com/questions/195478/get-custom-field-values-of-taxonomy-terms
+
+-->For active tab on page refresh
+
+https://codepen.io/angelorubin/pen/qZzjdX
+https://stackoverflow.com/questions/26739798/add-class-to-parent-div-using-jquery
+
+
+--->previous 
+.category-tabs .tabs li span.active { background-color: #000;}
+.category-tabs .tabs li span.active a { color:#fff;}
+
+$(document).ready(function () {
+    $(".category-tabs .tabs  li span").on('click', function (e) {
+        window.localStorage.setItem('activeTab', $(e.target).attr('href'));
+    });
+    var activeTab = window.localStorage.getItem('activeTab');
+    if (activeTab) {
+        $('.category-tabs .tabs  li span a[href="' + activeTab + '"] ').parent().addClass('active');
+        window.localStorage.removeItem("activeTab");
+    }
+});
+
+
+--->new
+$(document).ready(function () {
+    $(".category-tabs .tabs  li a").on('click', function (e) {
+        window.localStorage.setItem('activeTab', $(this).attr('href'));
+    });
+    var activeTab = window.localStorage.getItem('activeTab');
+    if (activeTab) {
+        $('.category-tabs .tabs  li a[href="' + activeTab + '"] span').parent().addClass('active');
+        //window.localStorage.removeItem("activeTab");
+    }
+});
+
+
+.category-tabs .tabs li a.active span { background-color: #000;color:#fff;}

@@ -1,0 +1,388 @@
+=============
+case 'development':
+    case 'facilitr':
+
+        $siteName = 'NoViolation';
+        $siteDomainName = 'local.noviolation';
+        define("EMAIL_LOGO", "<img src=\"http://noviolation.com/images/mailer/nv-cloud-sm.png\" alt=\"No Violation\" width=\"220\" height=\"102\" $emailLogoStyle />");
+        if ($needdbinfo) {
+            define("DB_SERVER", "localhost");
+            define("DB_USER", "root");
+            define("DB_PASS", "");
+            define("DB_NAME", "compliance");
+        }
+
+--->hcc company id = 427
+
+--->https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_loader
+====================
+
+@doug do you have any priority tasks for tomorrow?
+
+@impressthenet I have resolved this issue and committed in facilitr-template branch.
+
+
+=========================sql
+
+\\pcs54\download\compliance.tar.gz
+
+========================================Pending tasks==================================
+
+https://github.com/NoViolation/nv/issues/652
+
+===
+https://github.com/NoViolation/nv/issues/648
+
+https://github.com/NoViolation/nv/issues/450
+
+https://github.com/NoViolation/nv/issues/649  // resolved in issue-434 branch.
+---
+
+https://github.com/NoViolation/nv/pull/643
+
+-->https://github.com/NoViolation/nv/issues/540
+
+-->https://github.com/NoViolation/nv/commit/d44302fa0a0b8e313cec5b6d9fd9acf9d0ab75d2
+
+-->https://github.com/NoViolation/nv/commit/83e2e061cbb9af3bff84e46aa010aa3f8dceb28c
+
+-->If fac is not selected then pls select fac msg should be appear.
+
+--->https://github.com/NoViolation/nv/issues/587
+
+========================================================================================================
+
+
+--->For new branch commit
+
+	->go to clone switchbranch 
+		->select master then update
+
+		->enter new branch name n switch manually
+
+--->For checkout of branch in sourcetree
+
+repository->checkout->new repo
+
+-->from source tree include project from ur pc
+
+file/clone-new/existing working copy
+
+--->For this project std is psr 2 n tab for js is 2
+
+--->doug account
+
+	u:doughcc
+	p:8Cyclone7
+
+--------->git
+	
+	u:MehulPanchal160
+	p:tatva160
+
+
+---------->db
+
+https://noviolation.com/dbadnv/
+
+db:compliance_clone only
+
+username : compliance
+Password : p24QyO4c@V54
+
+For noviolation
+--->User : tecdo 
+    password: sSf94080
+
+For facilitr
+--->User : tecrp 
+    password: sSf94080
+
+--->trello.com->development
+    u:mehulpanchal
+    p:mehul123456
+	 
+--->For updating github server
+	https://pub.facilitr.com/switchBranch.php
+
+	--->select branch and then update and can see updated files.
+
+--->live
+	https://pub.facilitr.com/main.php
+
+->live for noviolation
+	https://pub.noviolation.com/main.php	
+
+	https://clone.noviolation.com/main.php	
+
+-->For other branches
+
+	branch.noviolation.com
+
+	https://branch.noviolation.com/switchBranch.php
+
+->production
+
+	->www.noviolation.com
+
+	->www.facilitr.com
+
+--->shift+enter for new line in commit box
+
+--->1280X600 laptop view in mozilla
+
+--->768X1024 ipad view in mozilla
+
+--->Never commit htaccess,webconfig,loginconstant
+
+--->https://clone.noviolation.com/main.php
+
+--->For enabling short tag via wamp php->php settings->check short open tag 
+
+-->After discarding loginconstants from commit change file include/loginconstants.php
+
+    case 'development':
+    case 'facilitr':
+        
+        $siteName = 'NoViolation';
+        $siteDomainName = 'local.noviolation';
+        define("EMAIL_LOGO", "<img src=\"http://noviolation.com/images/mailer/nv-cloud-sm.png\" alt=\"No Violation\" width=\"220\" height=\"102\" $emailLogoStyle />");
+        if ($needdbinfo) {
+            define("DB_SERVER", "192.168.10.160");
+            define("DB_USER", "root");
+            define("DB_PASS", "root");
+            define("DB_NAME", "compliance_clone");
+        }
+
+->  case 'development':
+    case 'facilitr':
+        
+        $siteName = 'NoViolation';
+        $siteDomainName = 'local.noviolation';
+        define("EMAIL_LOGO", "<img src=\"http://noviolation.com/images/mailer/nv-cloud-sm.png\" alt=\"No Violation\" width=\"220\" height=\"102\" $emailLogoStyle />");
+        if ($needdbinfo) {
+            define("DB_SERVER", "192.168.10.67");
+            define("DB_USER", "hina");
+            define("DB_PASS", "");
+            define("DB_NAME", "compliance");
+        }
+
+->https://github.com/NoViolation/nv/issues
+
+--->0 1 condition is in include/session.php 
+
+	line no 212
+
+-------------->mail id
+
+---->testmail.team5@gmail.com
+	pass:123team5
+
+===========================================
+--->For decoding single n double quotes
+
+https://stackoverflow.com/questions/3574609/php-html-decoding-help-converting-a-039quote039-is-bbold-b
+
+https://www.w3schools.com/php/func_string_htmlspecialchars_decode.asp
+
+--->For DOM positioning jquery datatable
+
+https://datatables.net/examples/basic_init/dom.html
+
+--->For highliting search in datatable
+
+https://datatables.net/blog/2014-10-22
+
+--->For coding style in eclipse
+
+window->preferences->php/javascript
+
+->when wamp error occurs
+
+https://stackoverflow.com/questions/26075073/wamp-server-startup-error
+
+->for zindex in jquery dialog
+
+http://dinbror.dk/blog/bpopup/
+
+->For clearing filter of datatable
+https://stackoverflow.com/questions/27402208/remove-search-filter-on-datatable
+https://datatables.net/forums/discussion/25180/clearing-tfoot-text-input-filters
+
+->confirmDocEmailDialog.parent().css("z-index", "9999");
+		
+
+->link by sir
+
+https://stackoverflow.com/questions/38586506/datatables-filter-ignore-special-characters-with-html-data
+
+
+====================>loading page from top
+$(document).ready(function(){
+    setTimeout(function () {
+  $("html,body").scrollTop(0);
+},5000);
+});
+
+$(window).ready(function() {  
+  $('html, body').animate({
+    scrollTop: '0px'
+  },5000);
+});
+
+
+===================================================
+
+-=========================site survey n inventory are managed by symfony
+
+	->in app folder
+
+	->header file is nvtopmenus.php
+
+	->app/modules/sitesurvey/templates
+
+	->symfony session lib->helper.class.php
+
+
+=====================symfony setting is in
+
+	->config/database.yml
+
+====================================for sql beautifier
+
+http://www.dpriver.com/pp/sqlformat.htm           
+
+
+->https://datatables.net/extensions/responsive/examples/display-types/bootstrap-modal.html
+
+
+================================================select value 
+https://stackoverflow.com/questions/590163/how-to-get-all-options-of-a-select-using-jquery
+http://jsfiddle.net/timur/ZmdcC/1/
+
+==========================for changing col data in datatable
+http://jsfiddle.net/dhirajbodicherla/189Lp6u6/12/
+https://datatables.net/reference/api/cell().data()
+
+
+---selectpicker dropdown refresh
+https://stackoverflow.com/questions/14804253/how-to-set-selected-value-on-select-using-selectpicker-plugin-from-bootstrap
+
+====================add class to td of datatable
+
+-https://m.datatables.net/forums/discussion/43538/tooltips-on-hyperlinked-fields-in-table
+
+-http://jsfiddle.net/hyzv5790/1/
+
+====================selectpicker refresh
+-https://stackoverflow.com/questions/27727655/can-not-populate-bootstrap-select-with-data-live-search-multiple-with-jquery
+
+-https://stackoverflow.com/questions/41717660/trying-to-set-data-live-search-to-select-picker/42049305
+
+======================================
+global $database;
+
+    // Query for all the PDF Uploads of tests and build an array containing the
+    // details
+    $pdfInfo = array();
+    $nonTestFloor = SWTANKTEST;
+    $q = <<<EOT
+SELECT pdfID from facilityDocumentCopies WHERE facilityID = '$facID'
+EOT;
+
+    $resultq =  $database->query($q, "Couldn't retrieve abc PDF test details", __LINE__);
+   $pdfIdCopy = array();
+
+    while ($row = mysql_fetch_array($resultq)) {
+        $pdfIdCopy = $row['pdfID'];
+    }
+ //   print_r( $pdfIdCopy );
+    if ($facID != -1)
+        $facStr = "WHERE facilityID = $facID " . buildSupportedTestTypeWhereClause(1) . " OR facilityDocumentCopies.pdfID in ($pdfIdCopy)";
+    else
+        $facStr = buildSupportedTestTypeWhereClause(0);
+    if ($isCalTrans)
+        $sqlStr = <<<EOT
+SELECT pdfuploads.pdfID, fileName, facilityID, testTypeID, LEFT(FROM_UNIXTIME(testDateTime), 10) as testDateTime, accountID, dateIdentified, dateApproved, delegatedDesignDecision, delegationAgreementDate, developmentPhase from pdfuploads JOIN calTransPdfDetails ON calTransPdfDetails.pdfID = pdfuploads.pdfID $facStr
+EOT;
+    else
+        $sqlStr = <<<EOT
+SELECT pdfuploads.pdfID, fileName, facilityID, testTypeID, LEFT(FROM_UNIXTIME(testDateTime), 10) as testDateTime, accountID from pdfuploads JOIN facilitydocumentcopies ON pdfuploads.pdfID = facilitydocumentcopies.pdfID $facStr
+EOT;
+
+    echo $sqlStr;exit;
+
+
+==================================hiding option from multiselect dropdown
+http://jsfiddle.net/sablefoste/YVMzt/6/
+
+// alert('here');
+// var facilityID = $("#facility_select option:selected").val();
+// $("#availableFacilities option[value='" + facilityID + "']").remove();
+// $("#availableFacilities").multiselect("refresh");
+
+
+--------------------------------------------------------------------
+For deleting functionality We will implement following scenario.
+(1)Suppose main facility will be deleted then all facility under main facility will be deleted from facilityDocumentCopies table and also main facility from pdfuploads table will be deleted.
+For example main facility is "123 Mission" and sub facilities are "central valero" and "1 Market Plaza". If "123 Mission" will be deleted then "central valero" and "1 Market Plaza"
+will be also deleted from facilityDocumentCopies table and 123 Mission will be deleted from pdfuploads table.
+
+(2)Suppose only "central valero" will be deleted then only entry from facilityDocumentCopies table will be deleted. Other facilities remain same.
+
+Should link be shown as previously clicked for particular session?
+
+=======================visiteddoc load time
+
+$.ajax({
+  type: "POST",
+  url: "getVisitedDocuments.php",
+  dataType: 'json',
+  cache: false,
+  success: function(result) {
+    console.log(result);
+    var valArr = result;
+    i = 0, size = valArr.length;
+    for(i; i < size; i++) {
+      console.log(valArr[i]);
+
+    }
+  }
+});
+
+var str = $('#uploadpdfform').serialize();
+console.log($("#uploadpdfform").serialize());
+$.ajax({
+type: "POST",
+    url: "adminprocess.php",
+    data: {str, 'submitEditRecord: 1
+    cache: false,
+    success: function(result) {
+
+}
+});
+
+
+
+---
+if ($documentCopy[0] == 'documentcopy') {
+            $pdfCopyID = $documentCopy[1];
+            $facCopyID = $documentCopy[2];
+            $sqlDeleteDoc = <<<EOT
+DELETE FROM `facilityDocumentCopies`
+WHERE `pdfID` = $pdfCopyID AND `facilityID` = $facCopyID
+EOT;
+            $database->query($sqlDeleteDoc, 'Failed deleting facilityID details');
+            $deleteAttempt = 1;
+        } elseif (mysql_num_rows($result)) {
+            $uploadedPDFInfo = mysql_fetch_assoc($result);
+
+            $sqlSelectDoc = <<<EOT
+SELECT *
+FROM facilityDocumentCopies
+WHERE pdfID = $uploadedPDFInfo['pdfID']
+EOT;
+            $selectResult = $database->query($sqlSelectDoc, 'Failed deleting facilityID details', __LINE__);
+            if(mysql_num_rows($result)) {
+
+            } else {

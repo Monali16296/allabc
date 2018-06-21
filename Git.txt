@@ -1,0 +1,40 @@
+--->If want to add project from local to git then use below code
+
+	-->https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+
+	-->https://help.github.com/articles/creating-a-new-repository/
+
+--->If want to add project from git to local then press clone/new from sourcetree 
+
+--->If want to commit file then stage it ->press commit->write msg->then push
+
+--->If want to add repos in styleci then go to ur acc->repos->enable style ci
+
+--->If want to add coding std then go to show details->create fix pr->view fix pr->merge pull req->confirm merge
+
+--->First take pull if any changes made in git and then commit file.
+
+--->For git
+	u:Monali16296
+	p:Mn#16296
+
+--->For solving error like permission to denied to git
+   https://stackoverflow.com/questions/15381198/remove-credentials-from-git/39608906#39608906
+
+--->If new repos added to git then press sync with github in styleci
+
+--->shift+enter for new line while committing.
+
+--->For checkout of branch in sourcetree
+
+repository->checkout->new repo
+
+-->from source tree include project from ur pc
+
+file/clone-new/existing working copy
+
+--------->git
+	
+	u:MehulPanchal160
+	p:tatva160
+

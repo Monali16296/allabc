@@ -1,0 +1,2 @@
+http://www.unixgeeks.org/security/newbie/unix/cron-1.html
+https://kb.iweb.com/hc/en-us/articles/230244168-Setting-up-cron-jobs-with-cPanel-

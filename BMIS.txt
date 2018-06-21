@@ -1,0 +1,282 @@
+->https://192.168.10.2/svn/vijay/bms 
+https://192.168.10.2/svn/vijay/is 
+
+CDN of basic ckeditor
+-><script src="https://cdn.ckeditor.com/4.8.0/basic/ckeditor.js"></script>
+
+->https://ckeditor.com/ckeditor-4/download/
+
+=============================================project=====================================================
+---->query structure
+	select
+	from
+	join
+	where
+
+---->For printing query
+	pre($this->db->last_query());
+
+===for anasource========
+
+-->u:team12 
+   p:U6NNHD8z
+
+
+====================task sheet=======================================
+https://docs.google.com/spreadsheets/d/1kuCwhKqkwWezaGtFSVXuGEAoKKLF-aUYGNLS2ke3joc/edit#gid=0
+
+-->For database copy
+	http://192.168.10.4:81/phpmyadmin/index.php 
+
+	uname: team5 
+	pass:  xv>;~A2q
+
+-->http://new.anasource.com/team5/bms/admin/cms
+
+
+-->BIMS(bms-admin)
+  U: superadmin@bims.com
+  P: admin
+
+-->credential of bms
+uname: joshmittleman13@yahoo.com
+pass:  gce123
+4830c4bae656e4dacd0afe82ba35636c930a5634
+
+-->IS
+U: hitesh.dodiya@tatvasoft.com
+P: 123456
+
+-->team12 gmail
+ U: tatva170@gmail.com
+ P: admin@12361
+
+-->BMIS: Building management inspection system
+
+-->BMS(Building Management System) is also called PO(Property Organizer)
+
+-->Is() is also called Inspection
+
+-->Admin panel is in bms and all services are in is.
+
+-->Hierarchy
+                                        SuperAdmin          and 7th role is guest
+	
+	BMS							IS
+	->Building owner				->Company Admin
+	->Building Operator				->Manager
+							->Inspector
+-->When building owner is  logged in  he can see building operator only
+
+-->When company admin is  logged in  he can see manager and inspector both
+
+-->When manager is  logged in  he can see inspector only
+
+-->For money transaction stripe is used(like paypal)
+
+-->This app is mobile app but for backend services are written in php
+
+-->comment,asset,environment
+	
+	-->comment means building inspection
+		
+	-->Asset means things which are in building
+
+-->Tenant means people who are living on rent
+
+-->Company statistics means profit n all.
+
+-->leads=request
+
+================================================coding IS==========================================================
+
+========================flow===================================
+header->users/reg->login->change_pass
+new order form->form->oder_form/index
+
+===========header theme
+
+->lang is defined in application\language\english\application_lang.php 
+
+->http://localhost/iss/company_settings  here segment(1) is company_settings
+
+->class="toggle menu is used for displaying menu in toggle form in mobile"
+
+===============login
+
+->$this->message() fun is in application\libraried\theme.php
+
+
+
+=======================================BMS overview===============================
+
+-->Home--->Edit property
+		
+           view doc
+
+-->User management--->Building operator info and add,edit,del fun
+
+-->Property management--->Req inspection
+
+                      --->Edit layout
+
+			->Property claim
+
+-->Inspection contract--->search
+
+-->Address book--->company and operator contacts
+
+		-->view,edit,del,add
+
+-->Task list--->edit,del,add,search
+
+-->calendar--->add new event
+ 	
+	    -->schedule_list
+		
+		->view,add,export
+
+--->Messages--->Inbox,sent msg,add
+
+--->Payments--->search
+
+
+====================================IS overview=======================================
+
+--->Home-->dashboard
+
+--->New order form-->add order,view all order list
+
+--->Inspections
+
+	--->Req and quotes--->leads(req from client),quote,sent quote,rejected quote,revised quote
+				
+			  --->view,edit,del,search
+	
+	--->Inspection status--->to schedule(till not scheduled),scheduled,in progress,completed
+    
+                             --->view,report,search
+
+	--->Report finishing--->reports,generate pdf,settings,view,search,default report setting,external pdf
+
+	--->Find a report--->view reports,send pdf to owner via mail,search
+
+	--->Perform inspection--->Perform new Inspection
+										
+					-->new inspection list,search
+			
+				->Continue inspection(inspections list which are in progress)
+			
+					-->Property layout
+
+--->Company management
+	
+	--->Offered services management-->diff services list,add,edit,del,search
+
+	--->quote template lan--->list,add,view,edit,del,serach
+
+	--->create/edit inspection workflow--->serach,add,edit,del,list,copy
+
+	--->workflow category grps
+	
+	--->Assets/categories management--->add,serach
+
+	--->Account billing--->serach
+
+	--->Add an order form directly to website
+
+--->users management--->manage users
+
+			-->add,edit,del,search
+
+		    --->Inspector users
+
+			-->add,edit,del,search
+
+-->Address book--->employee,client,potential client,referral,vendor contacts
+
+		-->view,edit,del,add,search
+
+--->task list--->add,serach
+
+--->company statistics--->statistics based on inspector
+
+				-->view,serach
+
+		      --->statistics based on properties
+
+				-->view,serach
+
+--->Messages--->Inbox,sent msg,add
+
+
+
+=================================calendar==================================
+
+---->downloaded client library and install it in bms folder via some command and include it in calendar.php controller
+
+
+-->329:http://localhost/bms/properties/property_detail/1
+-->331:http://localhost/is/perform_inspection/edit_layout/en/10
+
+ <td style="width: 8%;"><?php echo date('m-d-Y', strtotime(convert_time_zone($order_form['of']['created_on'], $client_timezone, 'UTC'))); ?></td>
+   <td><?php echo $report_finishing_page['rf']['date_of_completion'] != '' && $report_finishing_page['rf']['date_of_completion'] != '0000-00-00 00:00:00' ? date('m/d/Y g:i a', strtotime(convert_time_zone($report_finishing_page['rf']['date_of_completion'], $client_timezone, 'UTC'))) : '-'; ?></td>                                                                        
+
+============================calendar========================================
+
+-->D:\Projects\wamp\www\bms\vendor\google\apiclient-services\src\Google\Service\Calendar.php
+
+-->https://www.googleapis.com/auth/calendar
+
+-->ics:internet connection sharing
+
+-->ctrl+shift+f for searching in whole project
+
+-->ctrl+shift+h for searching n replacing in whole project
+
+Failed to connect to www.googleapis.com port 443: and some CURL information needed
+
+-->error1: Fatal error: Uncaught exception 'GuzzleHttp\Exception\ConnectException' with message 'cURL error 7: Failed to connect to www.googleapis.com port 443: Timed out (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)' in D:\Projects\wamp\www\bms\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php on line 186
+
+-->error2:Google_Service_Exception: { "error": { "errors": [ { "domain": "global", "reason": "required", "message": "Login Required", "locationType": "header", "location": "Authorization" } ], "code": 401, "message": "Login Required" } } in D:\Projects\wamp\www\bms\vendor\google\apiclient\src\Google\Http\REST.php on line 118
+
+->for firewall->https://wiki.mcneel.com/zoo/window7firewall
+
+->for development project:https://console.developers.google.com/apis/credentials?project=numeric-replica-186808
+
+-->https://developers.google.com/google-apps/calendar/quickstart/php
+
+-->https://fullcalendar.io/docs/google_calendar/
+
+-->https://developers.google.com/google-apps/calendar/v3/reference/events/import#examples
+
+-->for making prooject in acc:https://www.sitepoint.com/calendar-as-a-service-in-php-easy-with-google-calendar-api/
+
+-->http://www.daimto.com/google-calendar-api-with-php-service-account/
+
+-->https://www.webdesignerdepot.com/2012/04/integrating-google-calendar-with-your-website/
+
+-->https://murze.be/how-to-setup-and-use-the-google-calendar-api
+
+-->http://enarion.net/programming/php/google-client-api/google-client-api-php/
+
+-->https://github.com/google/google-api-php-client#installation
+
+-->https://developers.google.com/google-apps/calendar/create-events
+
+
+==================calendar=====================================================
+
+-->https://developers.google.com/google-apps/calendar/quickstart/php
+
+-->https://developers.google.com/google-apps/calendar/create-events
+
+==========for anasource calendar==============
+http://new.anasource.com/team12/team5/test/bms/
+
+-->For solving(TMS)
+login
+u:info@gcenvironmental.com
+p:gce123
+
+html_entity_decode($inspection_detail['definitions'])

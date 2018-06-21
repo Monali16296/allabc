@@ -1,0 +1,1200 @@
+Discussion on wishlist on mon with client.
+
+
+-->For classes you will only need class name.
+For students, Student name, class name (auto filled but can be changed and when changed they will move under that class when the instance is saved) 
+End of year marks for all 7 subjects, overall total and overall percentage.
+
+
+For certificates, we might have 2-3 templates. We need to work out how to do this and see if template can be changed. 
+Then super admin will select template and then select some criteria like madrasah, students with marks above etc. and then generate certificate. 
+Those certificates can then be downloaded by Super admin from a restricted certificates page.
+
+Dynamic fields needed, Name, class, madrasah name, madrasah centre number(5 digit id).
+
+
+
+---->membership only for centre admin.
+
+---->only centre admin can register.
+
+--->in admin->centre add one field of membership.
+
+
+--->dhara@gmail.com->user
+ 
+--->mansi@gmail.com->centre
+
+--->pass:123456
+
+--->Client is happy - all work complete. If there are any bugs he will notify me. Thank you for your effort :-)17:34
+from client
+
+
+--->02/02/2018
+	
+	edit paper route in public papers section (backend)
+
+--->06/02/2018
+
+Client messaged this 
+
+Manage Public papers section is working perfectly. The change hasn't yet been applied to to the manage papers section
+
+--->For toggle button on/off using js
+
+$('#coversheetToggle').bootstrapToggle('on');
+
+
+--->live db
+
+	https://185.162.224.16.srvlist.ukfast.net:2083/cpsess9968412993/frontend/paper_lantern/index.html?login=1&post_login=44528216937031
+
+	Username: nasihah
+	Password: sycfgug283tr82gr 
+
+
+
+--->For page border in word
+
+	https://www.phpdocx.com/api-documentation/layout-and-general/add-page-border-Word-document-with-PHP
+
+
+- Export Modal
+- Place holder remove
+- Answer border none if applicable 
+- UL li line height
+
+-->main staging (live)
+
+	http://exams.an-nasihah.com
+            
+-->old staging 
+
+	http://staging.an-nasihah.com/login
+
+	username: Nasiha@justloyalty.co.uk 
+	pass: 123456
+
+-->https://github.com/NoViolation/nv
+
+-->Staging new 
+
+	http://examportal.staging.an-nasihah.com
+
+-->sheet
+
+	https://docs.google.com/spreadsheets/d/1VJysBdf4t-Ih9f9zR86-KSPu2z3nGWU3WlYbigOukMs/edit#gid=0
+
+
+
+-->c panel staging files
+
+	Staging Server Details
+----------------------------------------------------
+	https://185.162.224.16.srvlist.ukfast.net:2083/cpsess0810258834/frontend/paper_lantern/index.html?login=1&post_login=34269858033801
+
+	Username: annasihah
+	Password: xycfbfjufg3165bukgsu
+
+
+--------------------staging db
+user = annasiha_exam 
+password= dqWXF8H{*br-
+ 
+-->For virtual
+
+	\\PCS54\VirtualApp
+	u:server7\exam3
+	p:exam@123
+
+--->Virtual word 2016
+
+	search remote desktop connection
+
+	192.168.10.140
+	u:sparsh1\pcs140
+	p:Tatva@140 
+
+
+->For dumy content
+
+	https://www.lipsum.com/
+
+->client:red,tatvasoft:blue,green
+
+->point and then ss
+
+1)--extra spaces on build paper page(not included)
+
+2)--->For instructions: in export model(2 hr)
+	
+3)export button: in export model export button should be in dark orange color and also apply diff color on hover(2 hr)
+
+4)toggle button and zip download: replace toggle with yes/no button and default is yes button in export model and also solve problem of double file download by making single zip of both files(16 hr)
+
+5)export to word and issue of two pages in cover sheet : have to add export to word option in export model and then solve this issue in word file(14 hr)
+
+6)que formatting : have to solve in both pdf and word(26 hr)
+
+7)formatting : After exporting file include table on top with name etc and also do well formatting(10 hr)
+
+8)reduce line height : After exporting word reduce line height bw ans(8 hr)
+
+9)not included
+
+10)add one page in admin/paper management/manage papers : 
+						
+We need to create new page and give option to send request to admin page for to make paper public from front side.
+
+The page should have paper name, author name, madrasah name, date and time of creation, box/button for super admin to approve for appearance on the front end. (30 hr)
+
+11) text color should be black : in export model instruction color(4 hr)
+
+--->setup(5 hr)
+
+--->total : 117 hr
+
+
+
+-------------->For database import via cmd
+
+	xampp panel->shell
+
+PCQ43@PCQ43 d:\projects\xampp
+
+# mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 36
+Server version: 10.1.25-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2017, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use nasiha_alnasiha
+Database changed
+MariaDB [nasiha_alnasiha]> source D:\project_doc\exam_portal_laravel\nasiha_alnasiha.sql
+
+
+
+
+-->For zip 
+
+composer require chumper/zipper
+
+	->In config/app.php
+		->Add provider
+			Chumper\Zipper\ZipperServiceProvider::class,
+
+		->Add alias
+			'Zipper' => Chumper\Zipper\Facades\Zipper::class,
+
+
+
+-->For word 
+
+composer require phpoffice/phpword:dev-master
+
+
+
+-->After installing package run 
+
+composer dump-autoload
+
+
+-->For xampp and wamp change path in env var of system.
+
+
+-->For toggle js n css
+
+	-->http://www.bootstraptoggle.com/
+	-->https://github.com/minhur/bootstrap-toggle
+
+
+-->For phpword table refer site
+
+	http://cgit.drupalcode.org/sandbox-thim-2325935/tree/vendor/PHPWord-0.11.1/samples/Sample_09_Tables.php?id=ebdcd508477672a59d21cb80a2a65742298c6701
+
+
+-->For printing query in laravel
+
+        //DB::enableQueryLog();
+query
+//dd(DB::getQueryLog());
+
+
+--->last element in foreach
+
+	http://sitesbyjoe.com/posts/detail/2012/06/26/php-quickly-get-the-first-and-last-elements-of-a-foreach-loop
+
+
+
+-->For laravel coding standards
+
+	https://laravel.com/docs/4.2/contributions#core-development-discussion
+	https://laravel.com/docs/5.5/contributions#core-development-discussion
+
+
+-->For github
+
+	username = MehulPanchal160
+	password = tatva160
+
+
+------------------------------project---------------------------------------
+
+-->routes are defined in routes folder.
+
+-->Models are defined in app folder.
+
+-->Models are defined in app/http/controllers folder.
+
+
+-------------------------for login----------------
+
+--->controller is in app/http/controllers/Frontend/Auth/LoginController
+
+	-->First go to showloginform() fun
+
+--->route for showloginform mentioned in routes/Frontend/access.php
+
+
+-----------------export of past paper
+ $(".loader-wrapper").show();
+        $("#loader-message").html('Downloading paper...');
+        var answers = $('#markscheme').prop('checked');
+
+        $.fileDownload($(e).prop('action'), {
+            successCallback: function (url) {
+                $("#loader-message").html('');
+                $(".loader-wrapper").hide();
+                if (answers) {
+                    $.fileDownload($(e).prop('action'), {
+                        prepareCallback: function () {
+                            $(".loader-wrapper").show();
+                            $("#loader-message").html('Downloading answers...');
+                        },
+                        successCallback: function (url) {
+                            $(".loader-wrapper").hide();
+                        },
+                        httpMethod: "POST",
+                        data: $(e).serialize() + '&answers=true'
+                    });
+                }
+
+            },
+            httpMethod: "POST",
+            data: $(e).serialize()
+        });
+        return false;
+
+
+----------------------preg_match
+ $string = '<table align="center" border="0" cellpadding="10" cellspacing="0" style="width:970px">
+                        <tbody>
+                         <tr>
+                          <td>Shahadah</td>
+                          <td>Ramadhan</td>
+                          <td>Sawm</td>
+                          <td>Eid</td>
+                          <td>Salah</td>
+                         </tr>
+                         <tr>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                         </tr>
+                         <tr>
+                          <td>Zakah</td>
+                          <td>Umrah</td>
+                          <td>Hajj</td>
+                          <td>Salaam</td>
+                          <td>Hijab</td>
+                         </tr>';
+                $output = preg_match('/(<[^>]+) border="1".*?"/i', $string, $matches, PREG_OFFSET_CAPTURE);
+
+                echo "<pre>";
+                print_r($matches);
+                exit;
+
+
+
+---------------style attribute of td
+ /*table style*/
+            $a = $DOM->getElementsByTagName('table');
+
+            foreach ($a as $a_table) {
+                $c_table = $a_table->getAttribute('style');
+            }
+            
+           //print_r($c_table);
+            /**/
+            
+            /*td style*/
+            $aa = $DOM->getElementsByTagName('td');
+
+            foreach ($aa as $aa_td) {
+                $c_td = $aa_td->getAttribute('style');
+            }
+            //print_r($c_td);
+            /**/
+            
+
+
+----->Laravel command for clearing cache on live
+
+	https://itsolutionstuff.com/post/laravel-5-clear-cache-from-route-view-config-and-all-cache-data-from-applicationexample.html
+
+
+----pdf footer old img
+
+	<tr><td style="padding-top:20px; border-top:1px solid #efefef; text-align: center;" colspan="2"><img style="width:250px;" src="/{{ public_path() . '/img/logo_full.jpg' }}" /></td></tr>
+
+--------------------------------------------------10 no task
+
+10. Under the Tutorials section, please add the following videos as links.
+ I will put the title in one line and the url in the next. On the webpage, just have the title clickable to open up in a new tab.
+
+How to create an exam paper
+https://youtu.be/k85Qp7oNijM
+
+How to add a new user
+https://youtu.be/LD46lWAneJc
+
+Exam Portal introduction
+https://youtu.be/-Fy7uX07UOc
+
+
+
+
+
+-----------------------------cloudflare issue of js
+cloudflare javascript not working
+why cloudflare is bad
+cloudflare disadvantages
+
+(1)https://blog.cloudflare.com/cloudflare-tips-troubleshooting-common-proble/
+	->Certain scripts on my website (like ads or social plugins) are breaking or not working
+CloudFlare has two beta features that speed up the loading of your web pages, but they can sometimes cause issues.
+Rocket Loader
+Rocket Loader can potentially impact JavaScript calls on your site, including things that potentially use jQuery. For example, if you see an ad widget breaking, it is possible that Rocket Loader is breaking the JavaScript and you should turn this feature off by going to your CloudFlare Settings page.
+If you want to keep Rocket Loader turned on for the performance boosts, you can make some edits for the service to ignore certain scripts on your site.
+Note: Rocket Loader is defaulted to off upon signup. Once you turn it on or off, the change takes less than 3 minutes to take effect.
+
+(2)https://support.qualityunit.com/886953-How-to-make-sure-CloudFlares-Rocket-Loader-ignores-your-tracking-scripts
+      ->If you are using CloudFlare, especially their Rocket Loader javascript loader it is likely that you are having problems with your Post Affiliate click or sale tracking javascripts.
+
+(3)https://wp-dreams.com/articles/2014/03/cloudflare-rocket-loader-for-wordpress/
+      ->Rocket Loader in some cases can cause issues with ceartain scripts,
+
+(4)https://github.com/Automattic/jetpack/issues/1712
+      ->On our Known Issues page, we discourage use of CloudFlare's Rocket Loader feature because it apparently interferes with some of our JS. We should just exclude our scripts from it instead:
+
+--->center role
+INSERT INTO role_user (user_id,role_id)
+  select u.id,"2" AS role_id from users u where u.id Not IN (select users.id from users inner join role_user where users.id=role_user.user_id)
+
+
+
+
+
+============================================version 2=13_3_2018==============================================
+
+--->current section as bronze membership user can create paper
+
+--->current section as silver membership user can dwd paper
+
+--->current section as golden membership user can upload student n class details n system will generate certificates.
+
+--->after reg super admin have ability to approve any user
+
+--->if a centre gets disabled then all users that centre should be automatically disabled.
+
+--->The home page will need a slider. The slides will be added from the back end and we should be able to deactivate a slide if we want. We should also be able to add a link to a whole slide image if needed.
+The home page and registration form need to be responsive.
+
+
+->repository/backend/access/user/userrepository
+
+   return $dataTableQuery->parent(access()->user()->centre_id)->onlyTrashed();
+
+line no 70 for only display centre related deleted users.
+
+->for downloading pdf pre prepared
+
+https://stackoverflow.com/questions/26971668/how-to-create-download-link-in-laravel/26974633
+
+============================stripe==========================================================================
+
+--->you can get private and public key from developers menu of stripe.com
+
+--->.closest() method jquery
+
+https://www.w3schools.com/jquery/traversing_closest.asp
+
+--->url for local:
+
+http://localhost/laravel_stripe/public/test
+
+--->On local bcz of timeout error sometimes transaction error(due to stripe api) comes so check it on live.It works fine.
+
+->stripe
+https://medium.com/justlaravel/how-to-integrate-stripe-payment-gateway-in-laravel-94b145ce4ede 
+https://medium.com/@kshitij206/how-to-integrate-stripe-payment-gateway-in-laravel-5-5-c2965854b983 
+
+->For stripe numbers
+https://stripe.com/docs/testing
+
+->stripe.com
+email: abc1231@gmail.com
+name: Admin
+pass: Mo16@nu2
+
+public key:pk_test_2fJEjXiznXlhR0EEkCEIEk6J
+private key:sk_test_4vn3KeKmLy7wDVndQ2cr14FF
+
+
+==================================excel upload n csv
+
+---->url:
+	
+	http://localhost/laravel_excel/public/importExport
+
+->http://www.expertphp.in/article/laravel-5-maatwebsite-import-excel-into-db-and-export-data-into-csv-and-excel
+->https://hdtuto.com/article/php-laravel-55-import-export-data-into-excel-and-csv-using-maatwebsite
+
+--->Follow below command and link
+
+
+	--->For installing excel package
+
+		composer require maatwebsite/excel 2.1.0
+	
+
+	--->create items table with description and title field.
+
+	--->http://itsolutionstuff.com/post/laravel-53-import-export-csv-and-excel-file-into-databaseexample.html\
+
+======================================phone no val
+
+https://stackoverflow.com/questions/40988383/laravel-validation-for-a-number-which-should-be-exactly-10-digits
+
+=============================dropdown val
+
+https://stackoverflow.com/questions/45234213/validate-select-form-in-laravel
+
+
+
+->Call to a member function getClientOriginalExtension() on string
+
+->https://itsolutionstuff.com/post/ajax-image-upload-example-with-validation-in-php-laravel-frameworkexample.html
+
+->http://www.expertphp.in/article/laravel-php-upload-image-with-validation-using-jquery-ajax-form-plugin
+
+
+
+
+
+4242424242424242
+
+
+====================================stripe
+
+composer require stripe/stripe-php
+
+=======================================hide cursor in input
+
+https://codepen.io/fxm90/pen/MpGQwL
+
+=========================================membership
+
+@if($logged_in_user->membership == 'gold' || $logged_in_user->membership == 'silver')
+                                <li><a href="{{ route('frontend.prePreparedExamPapers') }}"><span class="fa fa-star-o"></span> Pre-prepared Exam Papers</a></li>
+                                @endif
+
+
+======================================laravel commands
+
+=======Reoptimized class loader:
+
+	php artisan optimize
+
+=======Clear Cache facade value:
+
+	php artisan cache:clear
+
+=======Clear Route cache:
+
+	php artisan route:cache
+
+======Clear View cache:
+
+	php artisan view:clear
+
+=====Clear Config cache:
+
+	php artisan config:cache	
+
+
+================================for creating migration
+
+php artisan make:migration membership_text_management_table
+
+php artisan migrate
+
+=========================================text editor
+
+https://www.kerneldev.com/2018/01/11/using-summernote-wysiwyg-editor-with-laravel/
+
+=========for downloading js n css of summernote
+https://summernote.org/getting-started/
+
+======================for access via ip (httpd-xampp.conf n also add proxy 192.168.11.43)
+
+
+ Alias /phpmyadmin "C:/xampp/phpMyAdmin/"
+<Directory "C:/xampp/phpMyAdmin">
+AllowOverride AuthConfig
+Require local
+ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+</Directory>
+
+
+
+change above code to
+
+Alias /phpmyadmin "D:/Projects/xampp/phpMyAdmin/"
+	<Directory "D:/Projects/xampp/phpMyAdmin">
+		AllowOverride AuthConfig
+		#Require local
+		Require all granted
+		ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+	</Directory>
+
+
+===========================================for database seed
+
+php artisan db:seed --class=CustomPermissionTableSeeder
+
+
+=========================================shardul sir
+
+/exam_portal/database/migrations - 2018_04_12_090118_create_pre_prepared_papers_table.php
+/exam_portal/database/seeds/Access - CustomPermissionTableSeeder.php
+
+/exam_portal/public/uploads - pre-exam-papers-pdf (create this dir)
+
+/exam_portal/routes/Backend - Access.php
+/exam_portal/routes/Frontend - Frontend.php
+
+/exam_portal/app - PrePreparedExamPapers.php
+
+/exam_portal/app/Http/Controllers/Backend/Access - PrePreparedExamPapersController.php
+/exam_portal/app/Http/Controllers/Frontend - FrontendController.php
+
+/exam_portal/resources/views/backend/includes - sidebar.blade.php
+
+/exam_portal/resources/views/backend - prePreparedExamPapers (add full dir)
+
+/exam_portal/resources/views/frontend/layouts - app.blade.php
+/exam_portal/resources/views/frontend/papers - prePreparedExamPapers.blade.php
+
+---------files deployment list for Membership Upgrade functionality
+
+/exam_portal/resources/lang/en - navs.php
+
+/exam_portal/resources/views/backend/includes - header.blade.php
+/exam_portal/resources/views/backend - accountUpgrade (add full dir)
+
+/exam_portal/routes/Backend - Access.php
+/exam_portal/app/Http/Controllers/Backend/Access - AccountUpgradeController.php
+
+---------files deployment list for Classes Management functionality
+
+/exam_portal/database/migrations - 2018_04_23_084716_create_classes_table.php
+/exam_portal/database/seeds/Access - CustomPermissionTableSeeder.php
+
+/exam_portal/app - Classes.php
+/exam_portal/app/Http/Controllers/Backend/Access - ClassesController.php
+/exam_portal/resources/views/backend/classes (add full dir)
+/exam_portal/routes/Backend - Access.php
+/exam_portal/resources/views/backend/includes - sidebar.blade.php
+
+
+
+
+========================================================================ckeditor
+
+https://github.com/UniSharp/laravel-ckeditor
+
+--------------------------command
+
+composer require unisharp/laravel-ckeditor
+
+php artisan vendor:publish --tag=ckeditor
+
+===================================================================dropdown selected condition
+
+https://stackoverflow.com/questions/1336353/how-do-i-set-the-selected-item-in-a-drop-down-box
+
+-->use short tag
+
+==================================================================pricing grid by client
+
+Pricing Grid: 
+
+Bronze: 
+• Lifetime access
+• Unlimited teacher accounts
+• Access to over 2000 questions with answers
+• Regular updates to the bank
+• Technical support
+Add a small note at the bottom. ‘Only available to those using the Islamic Curriculum Series’
+
+Silver:
+
+• Lifetime access
+• Unlimited teacher accounts
+• Access to over 2000 questions with answers
+• Regular updates to the bank
+• Technical support
+• Ready-made exam papers
+• Detailed mark schemes
+• Certificate template
+
+Gold:
+
+In addition to the bronze membership
+• Lifetime access
+• Unlimited teacher accounts
+• Access to over 2000 questions with answers
+• Regular updates to the bank
+• Technical support
+• Ready-made exam papers
+• Paper marking service
+• Results management
+• Printed certificates
+
+
+=======================foreach in select
+
+https://stackoverflow.com/questions/40529838/how-to-use-a-foreach-loop-inside-laravel-formselect-element
+
+====================================Remember the Form input even if validation fails
+
+https://stackoverflow.com/questions/31310894/can-i-restore-the-input-field-values-after-validation-through-custom-request-obj
+
+========================random no
+
+https://www.w3schools.com/php/func_math_rand.asp
+
+================================random no in sql
+
+https://www.w3schools.com/sql/func_sqlserver_rand.asp
+
+----------------------for old value
+
+https://stackoverflow.com/questions/33085254/how-to-repopulate-a-form-with-latest-changes-after-validation-failure-during-upd
+
+===========================random no(for updating old entries in centres table)
+
+update centres set random_id = (RAND()*(10000-99999+0)+99999)
+
+========================for checking duplicate random_id after updating old entries in centre table
+
+SELECT
+    *,COUNT(*)
+FROM
+    centres
+GROUP BY
+    random_id
+HAVING 
+    COUNT(*) > 1
+
+=========================================for unique random numbers in db(callback fun)
+
+https://stackoverflow.com/questions/28524290/how-to-generate-unique-random-value-for-each-user-in-laravel-and-add-it-to-datab
+
+===========================laravel checkbox validation
+
+https://stackoverflow.com/questions/3035634/jquery-validate-check-at-least-one-checkbox
+
+==================================array of checkbox value
+
+https://stackoverflow.com/questions/16170828/jquery-get-values-of-checked-checkboxes-into-array
+
+
+======================================for projet excel import
+
+composer require tijsverkoyen/css-to-inline-styles 2.2.1
+
+composer require maatwebsite/excel 2.1.27
+
+------------------in app.php
+
+Maatwebsite\Excel\ExcelServiceProvider::class,
+
+'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+
+
+
+--------------------------->file
+
+@extends ('backend.layouts.app')
+@section('after-styles')
+<style>
+    .dataTables_wrapper .dataTables_filter {
+        text-align: right;
+    }
+    .dataTables_wrapper .dataTables_filter label {
+        font-weight: normal;
+    }    
+
+    .dataTables_paginate.paging_simple_numbers {
+        text-align: right;
+    }
+</style>
+@stop
+@section('page-header')
+<h1>
+    Centres Management
+    <small>Active Centres</small>
+</h1>
+@endsection
+
+@section('content')
+     {{ Form::open(['route'=>'admin.access.centre.exportRecords', 'id'=>'export-form', 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'get']) }}
+<div class="box box-success">
+    <div class="box-header with-border">
+        <h3 class="box-title">Active Centres</h3>
+
+
+        <div class="box-tools pull-right">
+            <div class="pull-right mb-10 hidden-sm hidden-xs">
+                <a href="{{ route('admin.access.centre.create') }}" class="btn btn-success btn-xs">Add New</a>
+                <!--                <a  class="btn btn-success btn-xs" id="export">Export
+                
+                                </a>-->
+
+                 {{ Form::submit('Export', ['class' => 'btn btn-success btn-xs', 'id' => 'export']) }}
+            </div><!--pull right-->
+
+            <div class="pull-right mb-10 hidden-lg hidden-md">
+                <div class="btn-group">
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="users/centres/create">Add New</a></li>
+                    </ul>
+                </div><!--btn group-->
+            </div><!--pull right-->
+
+            <div class="clearfix"></div>   
+        </div>
+    </div><!-- /.box-header -->
+
+    <div class="box-body">
+        <div class="table-responsive">
+       
+          
+            <table id="topics-table" class="table table-condensed table-hover table-responsive" style="margin-top: 10px;">
+                <thead>
+                    <tr>
+                        <th>
+                            {{ Form::checkbox('export_all', 0, null, ['id' => 'ckbCheckAll']) }}
+                        </th>
+                        <th>Id</th>
+                        <th>Centre Name</th>
+                        <th>Logo</th>
+                        <th>Users</th>                          
+                        <th>Status</th>
+                        <th>{{ trans('labels.general.actions') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($centres as $centre)
+                    <tr>
+                        <td>                    
+                            {{ Form::checkbox('export_record[]', $centre->id, null, ['class' => 'checkBoxClass']) }}
+                        </td>
+                        <td>{{ $centre->id }}</td>
+                        <td>{{ $centre->name }}</td>
+                        <td>{{ Html::image($centre->logo) }}
+                        <td>{{ $centre->users->count() }}</td>                         
+                        <td>{{ $centre->status }}</td>
+
+                        <td>
+                            <a href="{{ route('admin.access.centre.edit',$centre->id) }}" class="btn btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
+                            <a data-method="delete" data-trans-button-cancel="Cancel" data-trans-button-confirm="Delete" data-trans-title="Are you sure?" class="btn btn-xs btn-danger" style="cursor:pointer;" onclick="$(this).find('form').submit();"><i class="fa fa-trash" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i>
+                                {{ Form::open(['method'=>'delete', 'route'=>['admin.access.centre.destroy', $centre->id] , 'name'=>'delete_item', 'style'=>'display:none']) }}
+                                {{ Form::close() }}
+                            </a>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+           
+<!--            <button type="submit" id="export">aaaaaaaa</button>-->
+            
+
+        </div><!--table-responsive-->
+    </div><!-- /.box-body -->
+</div><!--box-->
+{{ Form::close() }}
+@stop
+
+@section('after-scripts')
+{{ Html::script("js/backend/plugin/datatables/jquery.dataTables.min.js") }}
+{{ Html::script("js/backend/plugin/datatables/dataTables.bootstrap.min.js") }}
+
+<script>
+  
+   
+    
+    $(function () {
+      
+          $("#export").click(function () {
+            if (!$(".checkBoxClass:checkbox:checked").length > 0 && !$("#ckbCheckAll:checkbox:checked").length > 0) {
+                alert('Please check at least one record');
+                return false;
+            }
+        });
+
+                
+        $("#ckbCheckAll").click(function () {
+            $(".checkBoxClass").prop('checked', $(this).prop('checked'));
+        });
+        
+        $('#topics-table').DataTable({
+           dom: 'Bfrtip',
+        buttons: [
+            'copy',
+            'csv',
+            'excel',
+            'pdf',
+            {
+                extend: 'print',
+                text: 'Print all (not just selected)',
+                exportOptions: {
+                    modifier: {
+                        selected: null
+                    }
+                }
+            }
+        ],
+        select: true
+        });
+    }
+    );
+</script>
+@stop
+
+
+===========================================for datatable export inbuilt
+
+https://datatables.net/extensions/buttons/examples/initialisation/select.html
+
+
+--------------------->js(new)[for export]
+
+        <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+        <script src="https://cdn.datatables.net/select/1.2.5/js/dataTables.select.min.js"></script>
+
+----------------------->css(new)
+
+
+        <link media="all" type="text/css" rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
+        <link media="all" type="text/css" rel="stylesheet" href="https://cdn.datatables.net/select/1.2.5/css/select.dataTables.min.css">
+
+above
+        <link media="all" type="text/css" rel="stylesheet" href="http://local.examportal/build/css/backend-3a57119e4d.css">
+
+ ================http://local.examportal/admin/access/certificates/templates
+
+
+
+https://xd.adobe.com/view/8906efd3-75dc-4e98-5e5d-aee0ab5afc8e-ff37/screen/e3f2a91a-87df-4172-bb82-273d9fecfb67/Gold-Step-1?fullscreen
+
+
+
+--->
+<!--                @if($name != "Bronze")
+                <div class="form-group">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-8">
+                        {{ Form::label('price', 'Price', ['class' => 'control-label']) }}
+                        <span class="star">*</span>
+                        {{ Form::number('price', $price, ['class' => 'form-control input-demo', 'readonly']) }}
+                    </div>
+                </div>
+                @endif
+                -->
+
+{{ old('subjects[]', $subject) }}
+
+
+
+
+
+
+
+Frontend
+---------------------
+- User Registration
+- Strip payment gateway integration
+- Membership integration
+- Pre-prepared exam papers
+
+Backend
+---------------------
+- Membership Management
+- Pre-prepared exam papers
+- if a centre gets disabled, all users under that centre should be disabled too automatically.
+- User Management - Admin can update user information from the backend 
+- Don't load all questions at once on the admin. It takes too long to load when working on editing the questions. Have the pages load on demand. When page x is clicked load that page.
+- Each centre, current and new to be given a 5 digit random ID.
+- On add centre profile page, allow more information to be added. This info will come from registration page. Allow super admin to export this info for all or selected centres in one go - Working on this.
+Let me know If any question. 12:58 
+
+
+
+==========================================design ======================================
+->\\192.168.10.2\public share\exam-portal
+
+->\\pcs160\exam_portal_bijal\exam-portal
+
+->\\192.168.10.2\public share\parind\exam_portal\html
+
+
+http://examportal.staging.an-nasihah.com/registration/Bronze
+
+
+
+select * from pre_prepared_papers as p left join user_course_subject as u on p.subject_id = u.subject_id and p.book_id = u.book_id where u.user_id = 687
+
+
+-----------
+ 
+I have checked it out. I have some important points that need attention ASAP. I will list them below. Rest of them, I will send soon In sha Allah. Some are things you would sort out anyway but just to mention.
+
+-The section "Learn How the Exam Portal Fits Your Madrasah" - Text needs to be made normal and not italics
+-Remove the word support in the footer.
+-In pricing, the text under bronze register button. Make it normal and not italics.
+-FAQ - Can't see that they can be opened. It just looks like text on a page. 
+-On the pricing grid, change get started to 'Register'
+-On pricing page, Join should be capital j above the logos.
+-The form needs some work. The placeholder text needs to be removed from the top and replaced with' Madrasah Details. Need to add some spacing under this text so there is a little more space before the form fields. 
+
+-The text inside of the input fields also needs to be non italics
+-Icons needs to be relevant. 
+-Title of the registration page is not correct, It says get in touch and text under it is also from contact page.
+-Email is not sending to our address. Just tested. Sent successfully by not received. Ticked send me a copy and that never worked also.
+
+-Change the contact success text to "Your message has successfully been sent!"
+
+-Remove italics from contact form also.
+-Gold user should not have full access fro backend like Super admin. 
+-The Silver and Gold membership pages looked messed up. Not sure whats gone wrong there.
+
+We really need the registration part sorted properly as we are planning to launch today so at least we can say you can start registering soon.
+
+Please see that this stuff gets sorted today and pushed to staging so that we can start taking registrations this week.
+Shall we get on a call in 10 mins 
+ 
+=============================accordion
+
+https://codepen.io/kamelagandhi/pen/WjOpVY
+
+
+
+
+==================================client(given on 30th may and done on 30th may 2018)
+
+-The section "Learn How the Exam Portal Fits Your Madrasah" - Text needs to be made normal and not italics   => done
+-Remove the word support in the footer. => done
+-In pricing, the text under bronze register button. Make it normal and not italics. => done
+-FAQ - Can't see that they can be opened. It just looks like text on a page. => pending
+-On the pricing grid, change get started to 'Register' => done
+-On pricing page, Join should be capital j above the logos. => done
+-The form needs some work. The placeholder text needs to be removed from the top and replaced with' Madrasah Details. Need to add some spacing under this text so there is a little more space before the form fields. => done
+
+-The text inside of the input fields also needs to be non italics => done
+-Icons needs to be relevant. => pending
+-Title of the registration page is not correct, It says get in touch and text under it is also from contact page. => done
+-Email is not sending to our address. Just tested. Sent successfully by not received. Ticked send me a copy and that never worked also. => done
+
+-Change the contact success text to "Your message has successfully been sent!" => done
+
+-Remove italics from contact form also. => done
+-Gold user should not have full access fro backend like Super admin. => pending
+-The Silver and Gold membership pages looked messed up. Not sure whats gone wrong there. => done
+
+We really need the registration part sorted properly as we are planning to launch today so at least we can say you can start registering soon.
+
+
+
+
+
+
+==========================client(given on 30th may 2018 at 6:30 pm and done on 1st may 2015 b/w 9:30 to 10:30 am)
+
+Email from Client: 
+
+ 
+
+The user should be able to click on any part on the box to open it up for each book. Right now, they must click on the three small dots. =>done
+The next button is not properly spaced. The spacing on all 4 sides of the text on the button need to have same spacing. This issues is on gold also. =>done
+On registration page, the 'using Islamic Curriculum' Yes/No filed doesn't have a label. =>done
+Under the title 'Silver Membership' add... "Please select the subjects under each Coursebook that you would like to access exams for." =>done
+Under 'Gold Membership' add... "Please select the subjects under each Coursebook that you would like to access exams for and type the number of students you would like to enter for each level." =>done
+The order of items under each Coursebook is a little wrong. Fiqh needs to be first. =>done
+Slides at the top and testimonials needs to be auto-rotating and looping. They also needs arrows to each side for navigation along with the dots also.
+The watch link on homepage needs to be our YouTube vid: https://www.youtube.com/watch?v=-Fy7uX07UOc =>done
+
+
+
+=================================for downloading icons
+
+https://icons8.com/icon/set/arrow/all
+
+
+
+----
+\\192.168.10.2\public share\exam-portal 17:19 
+- membership.html
+- css
+-  General.js
+Updated 
+
+
+--------------for sign up button
+
+\\192.168.10.2\public share\parind\exam_portal\html
+
+<href="version={{config('access.version')}}">
+
+
+----------------------------------------client(2nd may 2018)
+
+- Form font size too small in the fields
+- Slider not working on another comp - Not showing up at all
+- Logo field doesn't have a label
+- Using curriculum Yes/No needs to be same size as all others
+- There are 2 fields that have not been styled under a Madrasah Detail section
+- Make instructions bold under the membership titles and make the container width shorter as the sentence carries on for too long.
+- Slides need to have the correct content from the file I sent before.
+- Line height on homepage of the Learn How section is too high and the text is still italics. 
+- Testimonials need to be updated with the 1 more that I have on the file. We will add more later 
+
+
+================================================================client changes on 2nd may at 6:25 pm done on 3rd may 2018(students quantity)
+
+Make instructions bold under the membership titles and make the container width shorter as the sentence carries on for too long. - Please clarify
+
+
+That text under gold membership goes to wide on the screen
+For gold invoice, in the quantity column, put the number of students registered for that paper
+The payment button is not working yet. I assume it's being worked on?
+
+
+
+adminmsp\public\webservice\processgetuserinfo(New)
+adminmsp\public\webservice\processlogin
+jcommunities\wp-content\themes\salient\functions.php
+jcommunities\wp-content\plugins\adminmsp\adminmsp.php
+
+
+
+ public function studentsList(Request $request) {
+        //
+        //print_r($request->marks);exit;
+        // DB::enableQueryLog();
+//            $students = Students::join('students_marks', 'student_id', '=', 'students.id')->select('students.name as student_name', 'students.id as student_id')
+//                    ->where('centre_id', $request->id)
+//                    ->where('marks', '>', 50)
+//                    ->get();
+        $studentsMark = DB::table('students_marks')
+                ->select('student_id', DB::raw("count(student_id) as count"))
+                ->where('marks', '>', $request->marks)
+                ->groupBy('student_id')
+                ->get();
+        //  dd(DB::getQueryLog());
+//        echo '<pre>';
+//        print_r($studentsMark);
+//        if(empty($studentsMark->toArray())) {
+//            echo 'here';
+//        } else {
+//             echo 'there';
+//        }exit;
+        if (!empty($studentsMark->toArray())) {
+            
+            foreach ($studentsMark as $all) {
+
+                if ($all->count == 7) {
+                    $studentsList = Students::where(['id' => $all->student_id, 'centre_id' => $request->id])->get();
+                  
+                    if (!empty($studentsList->toArray())) {
+                        foreach ($studentsList as $student) {
+                            //print_r($a);
+                            $students[$student->id] = $student->name;
+                            //$c = $a->name;
+                            //echo $c;
+                        }
+                        echo '<pre>';
+                        print_r($students);
+                        return $students;
+                    }
+                } else {
+                    // echo 'hi';exit;
+                    return response()->json(false);
+                }
+            }
+        } else {
+            return response()->json(false);
+        }
+
+        //  return json_encode($students);
+    }
+
+=========================================str_replace
+
+https://stackoverflow.com/questions/9393885/how-to-replace-multiple-items-from-a-text-string-in-php
+
+=============================laravel pagination with search
+
+http://justlaravel.com/paginated-data-search-laravel/
+
+================================condition with()
+
+https://stackoverflow.com/questions/33404532/laravel-5-where-clause-from-another-table
+
+===================================keep value after page refresh
+
+https://stackoverflow.com/questions/38930144/keep-input-value-after-refresh-page
+
+===========================
+
+1) On manage pre-prepared exam papers, there’s a change needed. On the downloads page, 1 more column needs to be added Which will say ‘Higher’ or ‘Foundation’. 
+
+In the admin, in the pre-prepared papers management screen, a field will be added for choosing if the uploaded paper is higher or foundation. 
+
+Also, each question paper will also have a mark scheme which will be accessed by silver users only. Gold will not be able to download the mark scheme. Each paper will also have a PDF certificate which only the silver users can download. Both Higher and foundation will be automatically be downloaded together when downloading a paper. So we could create a zip when silver downloads the paper with the 5 files (paper [higher and foundation], mark scheme and certificate) but when gold tries to download same exam, they only get the question paper, both higher and foundation in a zip. 
+=> 8 hrs.
+
+2) http://examportal.staging.an-nasihah.com/admin/access/centre/1/edit On this page, it says edit topic and topic management. Also, on this page, can we have a list of all the members in this centre at the bottom of this page also.
+=> 4 hrs
+
+3) For the testimonials section, we needs to be able to add testimonials from backend. 
+=> 4 hrs
+
+4) The pagination applied on manage questions page is good and all pages in dashboard need that type of pagination.
+=> 44 hrs for all the pages

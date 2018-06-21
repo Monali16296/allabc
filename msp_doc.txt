@@ -1,0 +1,301 @@
+->https://192.168.10.2/svn/vijay/presgroup_sites/adminmsp
+
+->https://192.168.10.2/svn/vijay/presgroup_sites/denovahomes
+
+->https://192.168.10.2/svn/vijay/presgroup_sites/jcommunities
+
+->https://192.168.10.2/svn/jignesh/presgroupdoc
+
+
+==================================================================
+include_path = ".;D:\Projects\Library"
+
+----->Memory limit issue is there so blank page is displaying.
+
+	->change memory limit in php.ini for solving the issue.
+
+===================================================================
+
+<VirtualHost *:80>
+    DocumentRoot "D:\Projects\wamp\www\adminmsp\public"
+    ServerName msp.localhost.com
+    ErrorLog "logs/adminmsp-error.log"
+    CustomLog "logs/adminmsp-custom.log" common
+    setEnv APPLICATION_ENV development2 
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "D:\Projects\wamp\www\denovahomes"
+    ServerName denova.localhost.com
+    ErrorLog "logs/adminmsp-error.log"
+    CustomLog "logs/adminmsp-custom.log" common
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "D:\Projects\wamp\www\jcommunities"
+    ServerName www.jcommunities.local
+    ErrorLog "logs/adminmsp-error.log"
+    CustomLog "logs/adminmsp-custom.log" common
+</VirtualHost>
+
+=============================in php.ini add================================
+
+include_path = ".;D:\Projects\Library"
+
+======================trello ====================
+
+https://trello.com/c/d97h4QgY/13-adding-quick-move-in-homes-button
+
+=========================team 5 mail==============================
+
+testmail.team5@gmail.com
+
+===========================urls===============
+
+(1) msp.localhost.com
+
+	live url:  www.adminmsp.com
+
+
+(2) denova.localhost.com
+
+(3) www.jcommunities.local
+
+	live url:	http://www.jcommunities.com
+
+==================================================
+
+
+====================================================msp.localhost.com
+
+->credential
+
+	Username: ravi@soldtou.com
+ 	Password: basketball
+
+	->other
+		ravi@presgroup.com 
+		presadmin1
+
+--->Db is in application/configs/application.ini on line no 169
+
+	--->[development2 : production]
+		
+		
+	phpSettings.display_startup_errors = 0
+	phpSettings.display_errors = 0
+	resources.db.params.host     = 192.168.10.62
+	resources.db.params.username = shwet
+	resources.db.params.password = shwet
+	resources.db.params.dbname   = adminmsp
+	resources.frontController.params.displayExceptions = 1
+
+
+	phpSettings.display_startup_errors = 0
+	phpSettings.display_errors = 0
+	resources.db.params.host     = localhost
+	resources.db.params.username = root
+	resources.db.params.password = 
+	resources.db.params.dbname   = adminmsp
+	resources.frontController.params.displayExceptions = 1
+
+---------->D:\Projects\wamp\www\adminmsp\supermsp_28082017\supermsp_28082017.sql
+
+
+==============================================www.jcommunities.local
+http://www.jcommunities.local
+http://localhost/marcus/
+------------------------admin panel
+
+url : www.jcommunities.local/wp-admin
+
+	user : presgroup 
+	pass : zly7KtJxi1B^rqQ9G2Lms8V2 
+
+
+=====================================live========================
+Host: ftp.midtownmicro.com
+User: web@jcommunities.com
+vr6d7y7r2p
+=================================================================
+->http://www.jcommunities.local/crostonsprings/register/
+
+
+->have to change db team5_jcommunities_local on 192.168.10.4
+
+	->wp_options
+
+		->chamge home and url value to jcommunities.localhost.com
+
+-->wp-content/plugins/adminmsp/adminmsp.php
+
+	->db settings are in wp-config.php
+
+	->changed url on line no 406 in function adminmsp_user_login
+
+		 ->$ws_url = "http://msp.localhost.com/webservice/Login";
+
+	->changed url on line no 878 in  function adminmsp_user_registration
+
+		->$ws_url = 'http://msp.localhost.com/webservice/Registration';
+
+	->changed url on line no 185 in function adminmsp_check_key
+
+		->$ws_url = 'http://msp.localhost.com/webservice/ValidateSecretKey';
+
+--->adminmsp/public/webservice/connection.php
+
+	$servername = "192.168.10.62";
+	$username = "shwet";
+	$password = "shwet";
+
+--->adminmsp/public/webservice/class/DBInfo.php
+
+	'main'=>array(
+        'host'=>'192.168.10.62',
+        'port'=>'',
+        'usernm'=> 'shwet',
+        'passwd'=> 'shwet',
+        'dbname'=>'adminmsp',
+    ),
+
+
+---------->Comment the secret key code line no 886
+
+ //$secret_key_de = WP_Adminmsp_Webservice::adminmsp_simple_crypt(get_option('msp_secret_key'),'d');
+
+	 if(!empty($secret_key_de))
+//      {
+//          
+//      	 $res_key = WP_Adminmsp_Webservice::adminmsp_check_key($secret_key_de);
+//            
+//            if ($res_key->status=='success') {
+//                   
+//      			 $result = WP_Adminmsp_Webservice::adminmsp_curlExecute($param,$ws_url);
+//              		
+//      		} 
+//               //  echo 'here';exit;
+//      }	 
+
+
+
+
+------------------>login functionality is in
+
+	wp-content/themes/salient/functions.php line no 5032
+
+
+---------------------->phpmyadmin
+
+	grant issue ->It's value should be yes because of stored procedures in db.
+
+--->definer error from db
+
+-->
+function adminmsp_check_login()
+  {
+      do_action ( 'user_register' );
+      custom_validation_with_login();
+
+      if ($_SESSION['session_token']){
+
+          //echo "<pre>"; print_r($GLOBALS['wp_query']->query['pagename']);die;
+          //if($GLOBALS['wp_query']->query['pagename'])
+          //$GLOBALS['wp_query']->query['pagename'] = 'crostonsprings/available-homes';
+
+//           if (strpos($GLOBALS['wp_query']->query['pagename'], 'register') !== false) {
+//                if ( wp_redirect( home_url().'/crostonsprings/available-homes' ) ) {
+//                     exit;
+//                 }
+//           }
+
+
+
+      }
+  }
+
+==============================full url
+
+---->https://stackoverflow.com/questions/6768793/get-the-full-url-in-php
+
+=====================header menu====================
+
+header.php
+
+===========================deactivate plugin
+-popup
+
+-popup maker
+
+==================================htaccess(if want to access via folder(localhost/jcommunities))===============================
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /jcommunities
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /jcommunities/index.php [L]
+</IfModule>
+
+# END WordPress
+
+php_value upload_max_filesize 64M
+php_value post_max_size 64M
+php_value max_execution_time 300
+php_value max_input_time 300
+
+==============================================================end===========================================================
+The Village 
+The Ranch
+
+
+http://www.jcommunities.com/quick-delivery-homes/
+http://www.jcommunities.com/quick-delivery-homes/thank-you
+
+
+===================================For hiding form title n description from page==================================
+
+[gravityform id="52" title="false" description="false"]
+
+
+=============================slide up/down===============================
+
+http://www.dawnhosie.com/
+
+jQuery("#gform_confirmation_wrapper_54").delay(650).slideUp(750);
+
+wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array ( 'jquery' ), 1.1, true);
+
+
+
+=====================================adminmsp connection workbench=================
+DB Host:  paradigm.csxxfuenklbe.us-east-1.rds.amazonaws.com
+DB Username:  sold2udba
+DB Password:  xe48xJll1
+DB Name:  supermsp
+
+ssh hostname: 107.22.162.239:22
+ ssh username: superha
+ ssh password: Aqgym87ebXDuXPgp
+=====================================================================
+ftp.midtownmicro.com 
+host - web@jcommunities.com 
+user - web@jcommunities.com 
+Host: ftp.midtownmicro.com
+User: web@jcommunities.com
+vr6d7y7r2p 
+
+====================================================add text to span using jquery
+
+https://stackoverflow.com/questions/4884021/jquery-add-text-to-span-within-a-div
+
+================================================event listener on form submit jquery
+
+https://docs.gravityforms.com/gform_confirmation_loaded/
+
+
+northridge@jcommunities.com
+
+http://jcommunities.anasource.com/

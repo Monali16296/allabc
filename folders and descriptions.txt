@@ -1,0 +1,45 @@
+================wamp
+
+======2_laravel_header_db
+
+	validation in laravel n db relation
+
+========ng4tutorial and laravel-new
+
+	angular+laravel(backend)	
+
+=========separate_string
+
+	separate given html string
+
+========my_wordpress
+
+	same as marcus project
+
+========wordpress
+
+	demo
+
+=======democake
+
+	cakephp demo
+
+======symfony_demo
+
+	symfony demo
+
+
+===============================xampp
+
+======test_30th====test_30th_old===test_30th_try(laravel)
+
+	phpunit demo(unit testing)
+
+===========laravel_stripe
+
+	stripe payment gateway with laravel
+
+==========laravel_excel
+
+	excel import n export with csv
+

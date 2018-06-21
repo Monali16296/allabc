@@ -1,0 +1,135 @@
+===============================no violation==============================
+
+--->For decoding single n double quotes
+
+https://stackoverflow.com/questions/3574609/php-html-decoding-help-converting-a-039quote039-is-bbold-b
+
+https://www.w3schools.com/php/func_string_htmlspecialchars_decode.asp
+
+--->For DOM positioning jquery datatable
+
+https://datatables.net/examples/basic_init/dom.html
+
+--->For highliting search in datatable
+
+https://datatables.net/blog/2014-10-22
+
+->when wamp error occurs
+
+https://stackoverflow.com/questions/26075073/wamp-server-startup-error
+
+->for zindex in jquery dialog
+
+http://dinbror.dk/blog/bpopup/
+
+->For clearing filter of datatable
+
+https://stackoverflow.com/questions/27402208/remove-search-filter-on-datatable
+https://datatables.net/forums/discussion/25180/clearing-tfoot-text-input-filters
+
+->loading from top in mozilla issue
+
+$(window).ready(function() {  
+  $('html, body').animate({
+    scrollTop: '0px'
+  },5000);
+});
+
+=========================exam_portal================
+
+--->For toggle button on/off using js
+
+$('#coversheetToggle').bootstrapToggle('on');
+
+--->For page border in word
+
+	https://www.phpdocx.com/api-documentation/layout-and-general/add-page-border-Word-document-with-PHP
+
+-------------->For database import via cmd
+
+	xampp panel->shell
+
+PCQ43@PCQ43 d:\projects\xampp
+
+# mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 36
+Server version: 10.1.25-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2017, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use nasiha_alnasiha
+Database changed
+MariaDB [nasiha_alnasiha]> source D:\project_doc\exam_portal_laravel\nasiha_alnasiha.sql
+
+-->For toggle js n css
+
+	-->http://www.bootstraptoggle.com/
+	-->https://github.com/minhur/bootstrap-toggle
+
+
+-->For phpword table refer site
+
+	http://cgit.drupalcode.org/sandbox-thim-2325935/tree/vendor/PHPWord-0.11.1/samples/Sample_09_Tables.php?id=ebdcd508477672a59d21cb80a2a65742298c6701
+
+
+-->For printing query in laravel
+
+        //DB::enableQueryLog();
+query
+//dd(DB::getQueryLog());
+
+
+--->last element in foreach
+
+	http://sitesbyjoe.com/posts/detail/2012/06/26/php-quickly-get-the-first-and-last-elements-of-a-foreach-loop
+
+
+
+-->For laravel coding standards
+
+	https://laravel.com/docs/4.2/contributions#core-development-discussion
+	https://laravel.com/docs/5.5/contributions#core-development-discussion
+
+----->Laravel command for clearing cache on live
+
+	https://itsolutionstuff.com/post/laravel-5-clear-cache-from-route-view-config-and-all-cache-data-from-applicationexample.html
+
+
+==============================marcus-wordpress====================================================
+
+-->For active tab on page refresh
+
+https://codepen.io/angelorubin/pen/qZzjdX
+https://stackoverflow.com/questions/26739798/add-class-to-parent-div-using-jquery
+
+--->For getting taxonomy value
+https://wordpress.stackexchange.com/questions/195478/get-custom-field-values-of-taxonomy-terms
+
+->limit in sql;
+
+https://developer.wordpress.org/reference/functions/get_posts/
+
+==========wamp related===========
+
+--->For enabling short tag via wamp php->php settings->check short open tag 
+
+--->can start console from mysql->mysql console
+
+--->tray icon error
+
+	wamp/scripts/php refresh.php
+
+
+===============================mozilla====================
+
+-->recover form add-ons
+
+=====================================net beans========================
+
+-----------for resetting net beans view
+
+windows->reset window

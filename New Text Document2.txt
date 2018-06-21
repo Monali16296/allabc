@@ -1,0 +1,365 @@
+--->Client is happy - all work complete. If there are any bugs he will notify me. Thank you for your effort :-)17:34
+from client
+
+
+--->02/02/2018
+	
+	edit paper route in public papers section (backend)
+
+--->06/02/2018
+
+Client messaged this 
+
+Manage Public papers section is working perfectly. The change hasn't yet been applied to to the manage papers section
+
+--->For toggle button on/off using js
+
+$('#coversheetToggle').bootstrapToggle('on');
+
+
+--->live db
+
+	https://185.162.224.16.srvlist.ukfast.net:2083/cpsess9968412993/frontend/paper_lantern/index.html?login=1&post_login=44528216937031
+
+	Username: nasihah
+	Password: sycfgug283tr82gr 
+
+
+
+--->For page border in word
+
+	https://www.phpdocx.com/api-documentation/layout-and-general/add-page-border-Word-document-with-PHP
+
+
+- Export Modal
+- Place holder remove
+- Answer border none if applicable 
+- UL li line height
+
+-->main staging
+
+	http://exams.an-nasihah.com
+            
+-->old staging 
+
+	http://staging.an-nasihah.com/login
+
+	username: Nasiha@justloyalty.co.uk 
+	pass: 123456
+
+-->https://github.com/NoViolation/nv
+
+-->Staging new 
+
+	http://examportal.staging.an-nasihah.com
+
+-->sheet
+
+	https://docs.google.com/spreadsheets/d/1VJysBdf4t-Ih9f9zR86-KSPu2z3nGWU3WlYbigOukMs/edit#gid=0
+
+
+
+-->c panel staging files
+
+	Staging Server Details
+----------------------------------------------------
+	https://185.162.224.16.srvlist.ukfast.net:2083/cpsess0810258834/frontend/paper_lantern/index.html?login=1&post_login=34269858033801
+
+	Username: annasihah
+	Password: xycfbfjufg3165bukgsu
+ 
+-->For virtual
+
+	\\PCS54\VirtualApp
+	u:server7\exam3
+	p:exam@123
+
+--->Virtual word 2016
+
+	search remote desktop connection
+
+	192.168.10.140
+	u:sparsh1\pcs140
+	p:Tatva@140 
+
+
+->For dumy content
+
+	https://www.lipsum.com/
+
+->client:red,tatvasoft:blue,green
+
+->point and then ss
+
+1)--extra spaces on build paper page(not included)
+
+2)--->For instructions: in export model(2 hr)
+	
+3)export button: in export model export button should be in dark orange color and also apply diff color on hover(2 hr)
+
+4)toggle button and zip download: replace toggle with yes/no button and default is yes button in export model and also solve problem of double file download by making single zip of both files(16 hr)
+
+5)export to word and issue of two pages in cover sheet : have to add export to word option in export model and then solve this issue in word file(14 hr)
+
+6)que formatting : have to solve in both pdf and word(26 hr)
+
+7)formatting : After exporting file include table on top with name etc and also do well formatting(10 hr)
+
+8)reduce line height : After exporting word reduce line height bw ans(8 hr)
+
+9)not included
+
+10)add one page in admin/paper management/manage papers : 
+						
+We need to create new page and give option to send request to admin page for to make paper public from front side.
+
+The page should have paper name, author name, madrasah name, date and time of creation, box/button for super admin to approve for appearance on the front end. (30 hr)
+
+11) text color should be black : in export model instruction color(4 hr)
+
+--->setup(5 hr)
+
+--->total : 117 hr
+
+
+
+-------------->For database import via cmd
+
+	xampp panel->shell
+
+PCQ43@PCQ43 d:\projects\xampp
+
+# mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 36
+Server version: 10.1.25-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2017, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use nasiha_alnasiha
+Database changed
+MariaDB [nasiha_alnasiha]> source D:\project_doc\exam_portal_laravel\nasiha_alnasiha.sql
+
+
+
+
+-->For zip 
+
+composer require chumper/zipper
+
+	->In config/app.php
+		->Add provider
+			Chumper\Zipper\ZipperServiceProvider::class,
+
+		->Add alias
+			'Zipper' => Chumper\Zipper\Facades\Zipper::class,
+
+
+
+-->For word 
+
+composer require phpoffice/phpword:dev-master
+
+
+
+-->After installing package run 
+
+composer dump-autoload
+
+
+-->For xampp and wamp change path in env var of system.
+
+
+-->For toggle js n css
+
+	-->http://www.bootstraptoggle.com/
+	-->https://github.com/minhur/bootstrap-toggle
+
+
+-->For phpword table refer site
+
+	http://cgit.drupalcode.org/sandbox-thim-2325935/tree/vendor/PHPWord-0.11.1/samples/Sample_09_Tables.php?id=ebdcd508477672a59d21cb80a2a65742298c6701
+
+
+-->For printing query in laravel
+
+        //DB::enableQueryLog();
+query
+//dd(DB::getQueryLog());
+
+
+--->last element in foreach
+
+	http://sitesbyjoe.com/posts/detail/2012/06/26/php-quickly-get-the-first-and-last-elements-of-a-foreach-loop
+
+
+
+-->For laravel coding standards
+
+	https://laravel.com/docs/4.2/contributions#core-development-discussion
+	https://laravel.com/docs/5.5/contributions#core-development-discussion
+
+
+-->For github
+
+	username = MehulPanchal160
+	password = tatva160
+
+
+------------------------------project---------------------------------------
+
+-->routes are defined in routes folder.
+
+-->Models are defined in app folder.
+
+-->Models are defined in app/http/controllers folder.
+
+
+-------------------------for login----------------
+
+--->controller is in app/http/controllers/Frontend/Auth/LoginController
+
+	-->First go to showloginform() fun
+
+--->route for showloginform mentioned in routes/Frontend/access.php
+
+
+-----------------export of past paper
+ $(".loader-wrapper").show();
+        $("#loader-message").html('Downloading paper...');
+        var answers = $('#markscheme').prop('checked');
+
+        $.fileDownload($(e).prop('action'), {
+            successCallback: function (url) {
+                $("#loader-message").html('');
+                $(".loader-wrapper").hide();
+                if (answers) {
+                    $.fileDownload($(e).prop('action'), {
+                        prepareCallback: function () {
+                            $(".loader-wrapper").show();
+                            $("#loader-message").html('Downloading answers...');
+                        },
+                        successCallback: function (url) {
+                            $(".loader-wrapper").hide();
+                        },
+                        httpMethod: "POST",
+                        data: $(e).serialize() + '&answers=true'
+                    });
+                }
+
+            },
+            httpMethod: "POST",
+            data: $(e).serialize()
+        });
+        return false;
+
+
+----------------------preg_match
+ $string = '<table align="center" border="0" cellpadding="10" cellspacing="0" style="width:970px">
+                        <tbody>
+                         <tr>
+                          <td>Shahadah</td>
+                          <td>Ramadhan</td>
+                          <td>Sawm</td>
+                          <td>Eid</td>
+                          <td>Salah</td>
+                         </tr>
+                         <tr>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                         </tr>
+                         <tr>
+                          <td>Zakah</td>
+                          <td>Umrah</td>
+                          <td>Hajj</td>
+                          <td>Salaam</td>
+                          <td>Hijab</td>
+                         </tr>';
+                $output = preg_match('/(<[^>]+) border="1".*?"/i', $string, $matches, PREG_OFFSET_CAPTURE);
+
+                echo "<pre>";
+                print_r($matches);
+                exit;
+
+
+
+---------------style attribute of td
+ /*table style*/
+            $a = $DOM->getElementsByTagName('table');
+
+            foreach ($a as $a_table) {
+                $c_table = $a_table->getAttribute('style');
+            }
+            
+           //print_r($c_table);
+            /**/
+            
+            /*td style*/
+            $aa = $DOM->getElementsByTagName('td');
+
+            foreach ($aa as $aa_td) {
+                $c_td = $aa_td->getAttribute('style');
+            }
+            //print_r($c_td);
+            /**/
+            
+
+
+----->Laravel command for clearing cache on live
+
+	https://itsolutionstuff.com/post/laravel-5-clear-cache-from-route-view-config-and-all-cache-data-from-applicationexample.html
+
+
+----pdf footer old img
+
+	<tr><td style="padding-top:20px; border-top:1px solid #efefef; text-align: center;" colspan="2"><img style="width:250px;" src="/{{ public_path() . '/img/logo_full.jpg' }}" /></td></tr>
+
+--------------------------------------------------10 no task
+
+10. Under the Tutorials section, please add the following videos as links.
+ I will put the title in one line and the url in the next. On the webpage, just have the title clickable to open up in a new tab.
+
+How to create an exam paper
+https://youtu.be/k85Qp7oNijM
+
+How to add a new user
+https://youtu.be/LD46lWAneJc
+
+Exam Portal introduction
+https://youtu.be/-Fy7uX07UOc
+
+
+
+
+
+-----------------------------cloudflare issue of js
+cloudflare javascript not working
+why cloudflare is bad
+cloudflare disadvantages
+
+(1)https://blog.cloudflare.com/cloudflare-tips-troubleshooting-common-proble/
+	->Certain scripts on my website (like ads or social plugins) are breaking or not working
+CloudFlare has two beta features that speed up the loading of your web pages, but they can sometimes cause issues.
+Rocket Loader
+Rocket Loader can potentially impact JavaScript calls on your site, including things that potentially use jQuery. For example, if you see an ad widget breaking, it is possible that Rocket Loader is breaking the JavaScript and you should turn this feature off by going to your CloudFlare Settings page.
+If you want to keep Rocket Loader turned on for the performance boosts, you can make some edits for the service to ignore certain scripts on your site.
+Note: Rocket Loader is defaulted to off upon signup. Once you turn it on or off, the change takes less than 3 minutes to take effect.
+
+(2)https://support.qualityunit.com/886953-How-to-make-sure-CloudFlares-Rocket-Loader-ignores-your-tracking-scripts
+      ->If you are using CloudFlare, especially their Rocket Loader javascript loader it is likely that you are having problems with your Post Affiliate click or sale tracking javascripts.
+
+(3)https://wp-dreams.com/articles/2014/03/cloudflare-rocket-loader-for-wordpress/
+      ->Rocket Loader in some cases can cause issues with ceartain scripts,
+
+(4)https://github.com/Automattic/jetpack/issues/1712
+      ->On our Known Issues page, we discourage use of CloudFlare's Rocket Loader feature because it apparently interferes with some of our JS. We should just exclude our scripts from it instead:
+
+--->center role
+INSERT INTO role_user (user_id,role_id)
+  select u.id,"2" AS role_id from users u where u.id Not IN (select users.id from users inner join role_user where users.id=role_user.user_id)
